@@ -1,0 +1,86 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-01T13:03:19.306Z",
+        "line": 8,
+        "name": "user get data from ReservationRoom",
+        "description": "",
+        "id": "user-can-read-data-from-database;user-get-data-from-reservationroom",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1985224900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user is connected to database",
+            "match": {
+              "location": "stepdefinitions.Database_step.user_is_connected_to_database()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 312671200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user gets all data in \"Notes\" column in \"tHOTELROOMRESERVATION\" table",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Notes\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"tHOTELROOMRESERVATION\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepdefinitions.Database_step.user_gets_all_data_in_column_in_table(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "com.microsoft.sqlserver.jdbc.SQLServerException: The result set has no current row.\r\n\tat com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:234)\r\n\tat com.microsoft.sqlserver.jdbc.SQLServerResultSet.verifyResultSetHasCurrentRow(SQLServerResultSet.java:539)\r\n\tat com.microsoft.sqlserver.jdbc.SQLServerResultSet.getterGetColumn(SQLServerResultSet.java:2022)\r\n\tat com.microsoft.sqlserver.jdbc.SQLServerResultSet.getObject(SQLServerResultSet.java:2359)\r\n\tat com.microsoft.sqlserver.jdbc.SQLServerResultSet.getObject(SQLServerResultSet.java:2460)\r\n\tat stepdefinitions.Database_step.user_reads_data_in_column(Database_step.java:25)\r\n\tat ✽.user reads 4 data in \"Notes\" column(file:///C:/Users/Ayse/IdeaProjects/tekrar_cucumber/./src/test/resources/features/database.feature:11)\r\n",
+              "duration": 228734400,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "user reads 4 data in \"Notes\" column",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Notes\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepdefinitions.Database_step.user_reads_data_in_column(java.lang.Integer,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@db_read"
+          }
+        ]
+      }
+    ],
+    "name": "user can read data from database",
+    "description": "",
+    "id": "user-can-read-data-from-database",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/database.feature",
+    "tags": []
+  }
+]

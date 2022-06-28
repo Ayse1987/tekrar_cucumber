@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.142">
+    <testcase classname="user can read data from database" name="user get data from ReservationRoom" time="2.708">
+        <failure message="The result set has no current row." type="com.microsoft.sqlserver.jdbc.SQLServerException">
+            <![CDATA[Given user is connected to database.........................................passed
+And user gets all data in "Notes" column in "tHOTELROOMRESERVATION" table...passed
+And user reads 4 data in "Notes" column.....................................failed
+
+StackTrace:
+com.microsoft.sqlserver.jdbc.SQLServerException: The result set has no current row.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:234)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.verifyResultSetHasCurrentRow(SQLServerResultSet.java:539)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.getterGetColumn(SQLServerResultSet.java:2022)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.getObject(SQLServerResultSet.java:2359)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.getObject(SQLServerResultSet.java:2460)
+	at stepdefinitions.Database_step.user_reads_data_in_column(Database_step.java:25)
+	at ✽.user reads 4 data in "Notes" column(file:///C:/Users/Ayse/IdeaProjects/tekrar_cucumber/./src/test/resources/features/database.feature:11)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
